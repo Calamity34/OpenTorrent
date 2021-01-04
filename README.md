@@ -3,4 +3,4 @@
 A Crossplatform Lightweight BitTorrent client that features the simplified .torrent format - **.otr**
 
 Discord server: [click](https://discord.gg/f3ZFPVSvZf)
-###### Stage: Planning the project
+###### Stage: Setting the team up
