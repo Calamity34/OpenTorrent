@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenTorrent Demo UI v0.2</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function onKonamiCode(cb) {
+            var input = '';
+            var key = '38384040373937396665';
+            document.addEventListener('keydown', function (e) {
+                input += ("" + e.keyCode);
+                if (input === key) {
+                    return cb();
+                }
+                if (!key.indexOf(input)) return;
+                input = ("" + e.keyCode);
+            });
+        }
+        onKonamiCode(function () {window.open('https://youtu.be/cB4dYfFgaME?t=11', "_blank")})
+
+        function filename() {
+            var name = document.getElementById('import');
+            document.getElementById('selectedfile').innerHTML = name.files.item(0).name;
+        };
+    </script>
+</head>
+<body>
+    <div id='block_container'>
+        <div class='input-wrapper' id='block1'>
+            <input type="file" class="import" id="import" accept=".otr, .torrent, .magnet" onchange='filename()'>
+            <label for="import">Import</label>
+        </div>
+        <div id='block2'>
+            <span id='selectedfile' >No file selected</span>
+        </div>
+    </div>
+    <!--    
+            we need some backend C# to utilize the file
+    -->
+    <br>
+    <br>
+    <table id="files">
+        <caption>Downloaded Files</caption>
+        <tr>
+            <td>[icon]</td>
+            <td>BigChungusMovie.mp4</td>
+            <td><button class="openbutton">Open File</button></td>
+            <td><button class="openbutton">Open Folder</button></td>
+        </tr>
+        <tr>
+            <td>[icon]</td>
+            <td>ThatBoringImage.jpg</td>
+            <td><button class="openbutton">Open File</button></td>
+            <td><button class="openbutton">Open Folder</button></td> 
+        </tr>
+        <tr>
+            <td>[icon]</td>
+            <td>BigMinecraftModpack.zip</td>
+            <td><button class="openbutton">Open File</button></td>
+            <td><button class="openbutton">Open Folder</button>
+            </td>
+        </tr>
+    </table>
+    <!-- a representation of a downloads table -->
+</body>
+</html>

@@ -1,0 +1,82 @@
+.import {
+    font-family:'SF UI Display';
+    font-weight: 600;
+    color: black;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+table, tr {
+    color: rgb(20, 20, 20);
+    border: 3px solid rgb(218, 218, 218);
+    border-style: ridge;
+    border-collapse: collapse;
+    border-radius: 14px;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: 'SF UI Display'
+    /* this will work on my pc with the SF font and on MacOS 100% but we need it to support other systems without the San Francisco font, can we include it in the app? */
+}
+
+caption {
+    color: rgb(20, 20, 20);
+    font-size: 17px;
+    font-weight: 700;
+    font-family: 'SF UI Display';
+    font-size: larger;
+}
+
+#files tr:nth-child(even) {
+    background-color: #e6e6e6;
+}
+
+body {
+    background-color:#ebebeb;
+}
+
+.openbutton, .input-wrapper {
+    border-radius: 14px;
+    background-color:#e0e0e0;
+    border: 1px solid #bdbdbd;
+    color: black;
+    padding: 3px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0 1px #5f5f5f;
+    font-family: 'SF UI Display';
+}
+
+.openbutton:hover {
+    background-color: rgb(202, 202, 202);
+    border: 1px solid #434343;
+}
+
+#block_container {
+    text-align: left;
+}
+
+#block1, #block2 {
+    display: inline;
+}
+
+#selectedfile {
+    border: 1px solid #424242; 
+    border-radius: 14px;
+    background-color: #b6b6b6;
+    color: black;
+    padding: 3px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 4px 12px;
+    font-weight: 400;
+    box-shadow: 0 1px #424242;
+    font-family: 'SF UI Display';
+}
